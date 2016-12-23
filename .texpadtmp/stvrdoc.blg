@@ -1,0 +1,74 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: stvrdoc.aux
+The style file: ../wileyj.bst
+Database file #1: ../wileyjbib.bib
+Repeated entry---line 1143 of file ../wileyjbib.bib
+ : @book{Halili2008
+ :                 ,
+I'm skipping whatever remains of this entry
+Warning--missing school in Jiang2010
+Warning--empty journal in Gay
+Warning--empty year in Gay
+Warning--empty journal in Sullivan
+Warning--empty year in Sullivan
+Warning--empty journal in Sandler2004
+Warning--missing publisher in Erinle2013
+Warning--missing publisher in Halili2008
+Warning--empty journal in Goncalves2014
+Warning--there's a number but no volume in Wert2013a
+Warning--empty journal in Cortellessa2007
+Warning--there's a number but no volume in Hunt2002
+Warning--there's a number but no volume in Harman2015
+Warning--empty author in Afzal2009
+Warning--empty journal in Garousi2006
+Warning--there's a number but no volume in Garousi2006
+Warning--empty year in DiAlesio2014
+Warning--empty journal in Canfora
+Warning--empty year in Canfora
+Warning--empty journal in Tracey1998
+Warning--there's a number but no volume in Pohlheim2005
+Warning--missing publisher in Jaziri2008
+Warning--missing publisher in GendreauMichelandPotvin2010
+You've used 55 entries,
+            2526 wiz_defined-function locations,
+            908 strings with 15335 characters,
+and the built_in function-call counts, 45691 in all, are:
+= -- 5188
+> -- 517
+< -- 2
++ -- 567
+- -- 129
+* -- 2838
+:= -- 4181
+add.period$ -- 109
+call.type$ -- 55
+change.case$ -- 48
+chr.to.int$ -- 0
+cite$ -- 78
+duplicate$ -- 5352
+empty$ -- 3835
+format.name$ -- 165
+if$ -- 9852
+int.to.chr$ -- 0
+int.to.str$ -- 55
+missing$ -- 551
+newline$ -- 173
+num.names$ -- 54
+pop$ -- 1684
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 1900
+stack$ -- 0
+substring$ -- 4192
+swap$ -- 3294
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 23
+while$ -- 311
+width$ -- 57
+write$ -- 478
+(There was 1 error message)

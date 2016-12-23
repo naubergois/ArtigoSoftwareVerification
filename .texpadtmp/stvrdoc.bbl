@@ -1,0 +1,277 @@
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+
+\bibitem{Draheim2006b}
+Draheim D, Grundy J, Hosking J, Lutteroth C, Weber G. {Realistic load testing
+  of Web applications}. \emph{Conference on Software Maintenance and
+  Reengineering (CSMR'06)}, 2006, \doi{10.1109/CSMR.2006.43}.
+
+\bibitem{Jiang2010}
+Jiang Z. {Automated analysis of load testing results}. Ph{D} {T}hesis 2010.
+  \urlprefix\url{http://dl.acm.org/citation.cfm?id=1831726}.
+
+\bibitem{Molyneaux2009}
+Molyneaux I. \emph{{The Art of Application Performance Testing: Help for
+  Programmers and Quality Assurance}}. 1st edn., "O'Reilly Media, Inc.", 2009.
+
+\bibitem{Wert2014}
+Wert A, Oehler M, Heger C, Farahbod R. {Automatic detection of performance
+  anti-patterns in inter-component communications}. \emph{QoSA 2014 -
+  Proceedings of the 10th International ACM SIGSOFT Conference on Quality of
+  Software Architectures (Part of CompArch 2014)}  2014;
+  :3--12\doi{10.1145/2602576.2602579}.
+  \urlprefix\url{http://dx.doi.org/10.1145/2602576.2602579}.
+
+\bibitem{Afzal2009a}
+Afzal W, Torkar R, Feldt R. {A systematic review of search-based testing for
+  non-functional system properties}. \emph{Information and Software Technology}
+   2009; \textbf{51}(6):957--976, \doi{10.1016/j.infsof.2008.12.005}.
+
+\bibitem{Gay}
+Gay G. {Challenges in Using Search-Based Test Generation to Identify Real
+  Faults in Mockito} ; :1--6.
+
+\bibitem{Sullivan}
+Sullivan MO, V\"{o}ssner S, Wegener J, Ag Db. {Testing Temporal Correctness of
+  Real-Time Systems --- A New Approach Using Genetic Algorithms and Cluster
+  Analysis ---} ; :1--20.
+
+\bibitem{Gois2016}
+Gois N, Porfirio P, Coelho A, Barbosa T. {Improving Stress Search Based Testing
+  using a Hybrid Metaheuristic Approach}. \emph{Proceedings of the 2016 Latin
+  American Computing Conference (CLEI)}, 2016; 718--728.
+
+\bibitem{Sandler2004}
+Sandler C, Badgett T, Thomas T. {The Art of Software Testing}  Sep 2004; :200.
+
+\bibitem{Corporation2007}
+Corporation M. {Performance Testing Guidance for Web Applications} Nov 2007.
+  \urlprefix\url{http://www.amazon.com/Performance-Testing-Guidance-Web-Applications/dp/0735625700
+  http://msdn.microsoft.com/en-us/library/bb924375.aspx}.
+
+\bibitem{DiLucca2006}
+{Di Lucca} Ga, Fasolino AR. {Testing Web-based applications: The state of the
+  art and future trends}. \emph{Information and Software Technology}  2006;
+  \textbf{48}:1172--1186, \doi{10.1016/j.infsof.2006.06.006}.
+
+\bibitem{Erinle2013}
+Erinle B. \emph{{Performance Testing With JMeter 2.9}}. 2013.
+
+\bibitem{Halili2008}
+Halili EH. \emph{{Apache JMeter: A practical beginner's guide to automated
+  testing and performance measurement for your websites.}} 2008,
+  \doi{10.1017/CBO9781107415324.004}.
+
+\bibitem{Feitelson2013}
+Feitelson DG. \emph{{Workload Modeling for Computer Systems Performance
+  Evaluation}}. Cambridge University Press, 2013.
+
+\bibitem{Goncalves2014}
+Gon\c{c}alves MC. {Um Processo de Infer\^{e}ncia de Desempenho para Apoiar o
+  Planejamento da Capacidade de Aplica\c{c}\~{o}es na Nuvem Um Processo de
+  Infer\^{e}ncia de Desempenho para Apoiar o Planejamento da Capacidade de
+  Aplica\c{c}\~{o}es na Nuvem}  2014; .
+
+\bibitem{Wert2013a}
+Wert A, Happe J, Happe L. {Supporting swift reaction: Automatically uncovering
+  performance problems by systematic experiments}. \emph{Proceedings -
+  International Conference on Software Engineering}  2013; (May):552--561,
+  \doi{10.1109/ICSE.2013.6606601}.
+
+\bibitem{brown1998antipatterns}
+Brown WH, Malveau RC, McCormick HW, Mowbray TJ. \emph{AntiPatterns: refactoring
+  software, architectures, and projects in crisis}. John Wiley \& Sons, Inc.,
+  1998.
+
+\bibitem{Cortellessa2007}
+Cortellessa V, Frittella L. {A Framework for Automated Generation of
+  Architectural Feedback from Software Performance Analysis}  2007; :171--185.
+
+\bibitem{Smith2000}
+Smith CU, Williams LG. {Software performance antipatterns}. \emph{Proceedings
+  of the second international workshop on Software and performance - WOSP '00}
+  2000; :127--136\doi{10.1145/350391.350420}.
+  \urlprefix\url{http://portal.acm.org/citation.cfm?doid=350391.350420}.
+
+\bibitem{Vetoio2011}
+Vetoio V. {PhD Thesis in Computer Science Automated generation of architectural
+  feedback from software performance analysis results Catia Trubiani}.
+  \emph{Language}  2011; .
+
+\bibitem{Smith2002}
+Smith C, Williams L. {Software Performance AntiPatterns; Common Performance
+  Problems and their Solutions}. \emph{Cmg-Conference-}  2002;
+  \textbf{2}:797--806.
+  \urlprefix\url{http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.100.6968{\&}rep=rep1{\&}type=pdf}.
+
+\bibitem{Smith2003}
+Smith CU, Williams LG. {More New Software Performance AntiPatterns: EvenMore
+  Ways to Shoot Yourself in the Foot}. \emph{Computer Measurement Group
+  Conference}  2003;
+  :717--725\urlprefix\url{http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.123.4517{\&}rep=rep1{\&}type=pdf}.
+
+\bibitem{Arcelli2012}
+Arcelli D, Cortellessa V, Trubiani C. {Antipattern-Based Model Refactoring for
+  Software Performance Improvement}. \emph{Proceedings of the 8th international
+  ACM SIGSOFT conference on Quality of Software Architectures (QoSA '12)}
+  2012; :33--42\doi{10.1145/2304696.2304704}.
+  \urlprefix\url{http://doi.acm.org/10.1145/2304696.2304704}.
+
+\bibitem{Mackinnon2001}
+Mackinnon T, Freeman S, Craig P. {Endo-Testing : Unit Testing with Mock
+  Objects}. \emph{Extreme programming examined}  2001;
+  :287--301\urlprefix\url{http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.23.3214{\&}rep=rep1{\&}type=pdf}.
+
+\bibitem{Brown2003}
+Brown Ma, Tapolcsanyi E. {Mock Object Patterns}. \emph{Matrix}  2003; :1--17.
+
+\bibitem{Hunt2002}
+Hunt EA, Thomas D, Pragmatic IT, Hunt A, Mackinnon T, Freeman S. {Software
+  Construction}. \emph{Ieee Software}  2002; (June):22--24,
+  \doi{10.1109/MS.2004.1259177}.
+
+\bibitem{Harman2015}
+Harman M, Jia Y, Zhang Y. {Achievements , open problems and challenges for
+  search based software testing}. \emph{8th IEEE International Conference on
+  Software Testing, Verification and Validation (ICST)}  2015; (Icst).
+  \urlprefix\url{http://www0.cs.ucl.ac.uk/staff/mharman/icst15.pdf}.
+
+\bibitem{Aleti2016}
+Aleti A, Moser I, Grunske L. {Analysing the fitness landscape of search-based
+  software testing problems}. \emph{Automated Software Engineering}  2016;
+  :1--19\doi{10.1007/s10515-016-0197-7}.
+
+\bibitem{Afzal2009}
+{A systematic review of search-based testing for non-functional system
+  properties}. \emph{Information and Software Technology}  2009;
+  \textbf{51}(6):957--976, \doi{10.1016/j.infsof.2008.12.005}.
+
+\bibitem{Garousi2006}
+Garousi V. {Traffic-aware Stress Testing of Distributed Real-Time Systems based
+  on UML Models using Genetic Algorithms}  2006; (August).
+
+\bibitem{Garousi2010}
+Garousi V. {A Genetic Algorithm-Based Stress Test Requirements Generator Tool
+  and Its Empirical Evaluation}. \emph{IEEE Transactions on Software
+  Engineering}  Nov 2010; \textbf{36}(6):778--797, \doi{10.1109/TSE.2010.5}.
+
+\bibitem{DiAlesio2013}
+{Di Alesio} S, Nejati S, Briand L, Gotlieb A. {Stress testing of task
+  deadlines: A constraint programming approach}. \emph{IEEE Xplore}  2013;
+  :158--167\doi{10.1109/ISSRE.2013.6698915}.
+
+\bibitem{DiAlesio2014}
+{Di Alesio} S, Nejati S, Briand L, Gotlieb A. {Worst-Case Scheduling of
+  Software Tasks -- A Constraint Optimization Model to Support Performance
+  Testing}. \emph{Principles and Practice of Constraint Programming} ;
+  :813--830\doi{10.1007/978-3-319-10428-7{\_}58}.
+
+\bibitem{Alesio2015}
+Alesio SDI, Briand LC, Nejati S, Gotlieb A. {Combining Genetic Algorithms and
+  Constraint Programming}. \emph{ACM Transactions on Software Engineering and
+  Methodology}  2015; \textbf{25}(1).
+
+\bibitem{tracey2000search}
+Tracey NJ. A search-based automated test-data generation framework for
+  safety-critical software. Ph{D} {T}hesis, Citeseer 2000.
+
+\bibitem{Alander}
+Alander JTJ, Mantere T, Turunen P. {Genetic Algorithm Based Software Testing}.
+  \emph{Neural Nets and Genetic Algorithms}, 1998.
+
+\bibitem{Wegener1997}
+Wegener J, Sthamer H, Jones BF, Eyres DE. {Testing real-time systems using
+  genetic algorithms}. \emph{Software Quality Journal}  1997;
+  \textbf{6}(2):127--135, \doi{10.1023/A:1018551716639}.
+  \urlprefix\url{http://www.springerlink.com/index/uh26067rt3516765.pdf}.
+
+\bibitem{J.WegenerK.GrimmM.GrochtmannH.Sthamer1996}
+{J Wegener, K Grimm, M Grochtmann, H Sthamer} BJ. {Systematic testing of
+  real-time systems}. \emph{EuroSTAR'96: Proceedings of the Fourth
+  International Conference on Software Testing Analysis and Review}  1996; .
+
+\bibitem{Briand2005}
+Briand LC, Labiche Y, Shousha M. {Stress testing real-time systems with genetic
+  algorithms}. \emph{Proceedings of the 2005 conference on Genetic and
+  evolutionary computation - GECCO '05}  2005;
+  :1021\doi{10.1145/1068009.1068183}.
+
+\bibitem{Canfora}
+Canfora G, Penta MD, Esposito R, Villani ML. {2005., Canfora, G., An approach
+  for QoS-aware service composition based on genetic algorithms} ; .
+
+\bibitem{Wegener1998}
+Wegener J, Grochtmann M. {Verifying timing constraints of real-time systems by
+  means of evolutionary testing}. \emph{Real-Time Systems}  1998;
+  \textbf{15}(3):275--298, \doi{Doi 10.1023/A:1008096431840}.
+
+\bibitem{Mueller1998}
+Mueller F, Wegener J. {A comparison of static analysis and evolutionary testing
+  for the verification of timing constraints}. \emph{Proceedings. Fourth IEEE
+  Real-Time Technology and Applications Symposium (Cat. No.98TB100245)}  1998;
+  \doi{10.1109/RTTAS.1998.683198}.
+
+\bibitem{Puschner1998}
+Puschner P, Nossal R. {Testing the results of static worst-case execution-time
+  analysis}. \emph{Proceedings 19th IEEE Real-Time Systems Symposium (Cat.
+  No.98CB36279)}  1998; \doi{10.1109/REAL.1998.739738}.
+
+\bibitem{Stations}
+{Wegener, Joachim and Pitschinetz, Roman and Sthamer} H. {Automated Testing of
+  Real-Time Tasks}. \emph{Proceedings of the 1st International Workshop on
+  Automated Program Analysis, Testing and Verification (WAPATV'00)}  2000; .
+
+\bibitem{Gross2000}
+Gross H, Jones BF, Eyres DE. {Structural performance measure of evolutionary
+  testing applied to worst-case timing of real-time systems}. \emph{Software,
+  IEE Proceedings-}  2000; \textbf{147}(2):25--30, \doi{10.1049/ip-sen}.
+
+\bibitem{Penta2007}
+Penta MD, Canfora G, Esposito G. {Search-based testing of service level
+  agreements}. \emph{Proceedings of the 9th annual conference on Genetic and
+  evolutionary computation}, 2007; 1090--1097.
+
+\bibitem{Garousi2008}
+Garousi V. {Empirical analysis of a genetic algorithm-based stress test
+  technique}. \emph{Proceedings of the 10th annual conference on Genetic and
+  evolutionary computation - GECCO '08}  2008;
+  :1743\doi{10.1145/1389095.1389433}.
+
+\bibitem{Tracey1998}
+Tracey NJ, Clark Ja, Mander KC. {Automated Programme Flaw Finding using
+  Simulated Annealing}  1998; .
+
+\bibitem{Pohlheim2005}
+Pohlheim H, Conrad M, Griep A. {Evolutionary Safety Testing of Embedded Control
+  Software by Automatically Generating Compact Test Data Sequences}.
+  \emph{Analysis}  2005; (724):804----814, \doi{10.4271/2005-01-0750}.
+
+\bibitem{raidl2010metaheuristic}
+Raidl GR, Puchinger J, Blum C. Metaheuristic hybrids. \emph{Handbook of
+  metaheuristics}. Springer, 2010; 469--496.
+
+\bibitem{Blum2003}
+Blum C, Roli A. {Metaheuristics in combinatorial optimization: overview and
+  conceptual comparison}. \emph{ACM Computing Surveys}  2003;
+  \textbf{35}(3):189--213, \doi{10.1007/s10479-005-3971-7}.
+
+\bibitem{Jaziri2008}
+Jaziri W. \emph{{Local Search Techniques: Focus on Tabu Search}}. 2008.
+
+\bibitem{Glover1986}
+Glover F, Mart{\'{i}} R. {Tabu Search}. \emph{Tabu Search}  1986; :1--16.
+
+\bibitem{talbi2009metaheuristics}
+Talbi EG. \emph{Metaheuristics: from design to implementation}, vol.~74. John
+  Wiley \& Sons, 2009.
+
+\bibitem{GendreauMichelandPotvin2010}
+{Gendreau, Michel and Potvin} JY. \emph{{Handbook of Metaheuristics}}, vol.
+  157. 2010, \doi{10.1007/978-1-4614-1900-6}.
+
+\end{thebibliography}
