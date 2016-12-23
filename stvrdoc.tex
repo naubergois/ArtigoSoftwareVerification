@@ -803,7 +803,7 @@ The algorithm \ref{happyscenario2} presents the Happy Scenario 2.
   \end{algorithmic}
 \end{algorithm}
 
-A further 2 algorithms were developed for the scenarios Traffic Jam and Tower of Babel.
+A further 2 algorithms were developed for the scenarios Traffic Jam and Tower of Babel. The Tower of Babel implementation realizes 300 conversions of the JSON standard for XML to a single object with 10 attributes.
 
 \subsection{Test Scenario Representation Module}
 
@@ -870,7 +870,7 @@ The experiments addresses:
 
 \subsection{The Ramp and Circuitous Treasure Hunt experiment}
 
-The experiment was carried out for 8 continuous hours. The Testbed tool was used and all tests were conducted without the need of a tester, automating the process of executing and designing performance test scenarios.In this experiment, Scenarios were generated with the Ramp and Circuitous Treasure antipattern as well as scenarios with Happy Scenario 1, Happy Scenario 2 and mixed scenarios. The Fig. \ref{fig:fitnessebygeneration1} and \ref{fig:fitnessebygeneration1-2} presents the fitnesse value obtained by each metaheuristic. The SA algorithm obtained the worst fitnesse values. Hybrid metaheuristic obtained the better fitnesse values. 
+The experiment was carried out for 8 continuous hours.  All tests in the experiment were conducted without the need of a tester, automating the process of executing and designing performance test scenarios.In this experiment, Scenarios were generated with the Ramp and Circuitous Treasure antipattern as well as scenarios with Happy Scenario 1, Happy Scenario 2 and mixed scenarios. The Fig. \ref{fig:fitnessebygeneration1} and \ref{fig:fitnessebygeneration1-2} presents the fitnesse value obtained by each metaheuristic. The SA algorithm obtained the worst fitnesse values. Hybrid metaheuristic obtained the better fitnesse values. 
 
 
 \begin{figure}[h]
@@ -944,7 +944,7 @@ Hybrid & 16 & 143 & 426740 & 30 & 113 & 13
 \end{tabular}
 \end{table}
 
-Fig. \ref{fig:responsetimegenerationalltests1} presents the response time by number of users of individuals with Happy Scenario 1 and Happy Scenario 2. The Figure illustrates that the individuals with best fitnesse value has more users and minor response time. The Fig. \ref{fig:fitnessegenerationalltests1-1} response time by number of users of individuals with with Ramp and Circuitous Treasure antipatterns scenarios. The Figure illustrates the smallest number of individuals with the antipatterns.
+Fig. \ref{fig:responsetimegenerationalltests1} presents the response time by number of users of individuals with Happy Scenario 1 and Happy Scenario 2. The Figure illustrates that the individuals with best fitnesse value has more users and minor response time. The Fig. \ref{fig:fitnessegenerationalltests1-1} presents the response time by number of users of individuals with the Ramp and Circuitous Treasure antipatterns scenarios. The Figure illustrates the smallest number of individuals with the antipatterns when compared to individuals who use the happy scenarios.
 
 
 \begin{figure}[h]
@@ -957,12 +957,12 @@ Fig. \ref{fig:responsetimegenerationalltests1} presents the response time by num
 \begin{minipage}{.5\textwidth}
 \centering
 \includegraphics[width=1\textwidth]{./images/experiment1-8.png}
-\caption{Finesse value by generation in all tests}
+\caption{Response time by number of users of individuals with the Ramp and Circuitous Treasure antipatterns}
 \label{fig:fitnessegenerationalltests1-1}
 \end{minipage}
 \end{figure}
 
-From the experiment, We conclude that the metaheuristics converged to scenarios with an happy path, excluding the scenarios with the use of an antipatterns. The hybrid metaheuristic returned individuals with higher fitness scores. However, the Hybrid metaheuristic made twice as many requests than Tabu Search to overcome it. The SA algorithm obtained the worst fitnesse values. The algorithm initially used a scenario with an anti pattern and found neighbors that still using an antipattern over the 17 generations of the experiment.
+In the first experiment, We conclude that the metaheuristics converged to scenarios with an happy path, excluding the scenarios with antipatterns. The hybrid metaheuristic returned individuals with higher fitness scores. However, the Hybrid metaheuristic made twice as many requests than Tabu Search to overcome it. The SA algorithm obtained the worst fitnesse values. The algorithm initially used a scenario with the Ramp and Circuitous Treasure antipatterns  and found neighbors that still using the antipatterns over the 17 generations of the experiment.
 
 
 
@@ -970,7 +970,7 @@ From the experiment, We conclude that the metaheuristics converged to scenarios 
 
 \subsection{The Tower Babel  and Unbalanced Processing experiment}
 
-The experiment was carried out for 6 continuous hours. The Testbed tool was used and all tests were conducted without the need of a tester.In this experiment, Scenarios were generated with Tower Babel and Unbalanced Processing antipattern as well as scenarios with Happy Scenario 1, Happy Scenario 2 and mixed scenarios. The Fig. \ref{fig:fitnessebygeneration2}  presents the fitnesse value obtained by each metaheuristic. The SA algorithm obtained the worst fitnesse values. Hybrid metaheuristic obtained the better fitnesse values.
+The experiment was carried out for 6 continuous hours. All tests in the experiment were conducted without the need of a tester. In this experiment, Scenarios were generated with Tower Babel and Unbalanced Processing antipattern as well as scenarios with Happy Scenario 1, Happy Scenario 2 and mixed scenarios. The Fig. \ref{fig:fitnessebygeneration2}  presents the fitnesse value obtained by each metaheuristic. The SA algorithm obtained the worst fitnesse values. Hybrid metaheuristic obtained the better fitnesse values.
 
 
 \begin{figure}[h]
@@ -1017,30 +1017,29 @@ As in the first experiment, the Hybrid algorithm performs twice as many requests
 
 \end{figure}
 
-Table \ref{tab:bestindividuals2} shows 4 individuals with 145 to 148 users.  The first individual has 72 users on Happy Scenario 2, 30 users on Happy Scenario 1, 46 user with the antipattern Tower Babel and a response time of 11 seconds. 
+Table \ref{tab:bestindividuals2} shows 4 individuals with 145 to 148 users.  The first individual has 72 users on Happy Scenario 2, 30 users on Happy Scenario 1, 46 user with the antipattern Tower Babel and a response time of 11 seconds. Despite the fact of doing 300 conversions of the JSON standard for XML. The antipattern implementation does not return a much higher response time than happy paths. While happy paths returns from 10 to 15 seconds from a single user, Tower Babel antipattern has a response time of 10 to 29 seconds. None of the best individuals found implements the Unbalanced Processing antipattern.
 
-Fig. \ref{fig:responsetimegenerationalltests1} presents the response time by number of users of individuals with Happy Scenario 1 and Happy Scenario 2. The Figure illustrates that the individuals with best fitnesse value has more users and minor response time. The Fig. \ref{fig:fitnessegenerationalltests1-1} response time by number of users of individuals with with Ramp and Circuitous Treasure antipatterns scenarios. The Figure illustrates the smallest number of individuals with the antipatterns.
-
+Fig. \ref{fig:responsetimegenerationalltests2} presents the response time by number of users of individuals with Happy Scenario 1 and Happy Scenario 2. The Figure illustrates that the individuals with best fitnesse value has more users and minor response time. The Fig. \ref{fig:fitnessegenerationalltests2-1} presents the response time by number of users of individuals with with Unbalanced Processing antipatterns scenarios. The Figure illustrates the smallest number of individuals with the  Unbalanced Processing antipattern when compared to individuals who use the happy scenarios and the Tower Babel antipattern.
 
 
 
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.7\textwidth]{./images/experiment2-5.png}
-\caption{Response time by generation in all tests scenarios}
-\label{fig:withnoantiexperiment2}
+\caption{Response time by number of users of individuals with Happy Scenario 1, Happy Scenario 2 and Tower Babel antipattern}
+\label{fig:responsetimegenerationalltests2}
 \end{figure}
 
 
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.7\textwidth]{./images/experiment2-6.png}
-\caption{Finesse value by generation in all tests}
-\label{fig:withantiexperiment2}
+\caption{Response time by number of users of individuals with Unbalanced Processing antipattern}
+\label{fig:fitnessegenerationalltests2-1}
 \end{figure}
 
 
-From the experiment, We conclude that the metaheuristics converged to scenarios with an happy path, excluding the scenarios with the use of an antipatterns. The hybrid metaheuristic returned individuals with higher fitness scores. However, the Hybrid metaheuristic made twice as many requests than Tabu Search to overcome it. The SA algorithm obtained the worst fitnesse values. The algorithm initially used a scenario with an anti pattern and found neighbors that still using an antipattern over the 17 generations of the experiment.
+We conclude that the metaheuristics converged to scenarios with an happy path and Tower Babel antipattern, excluding the scenarios with Unbalanced Processing antipattern. The hybrid metaheuristic returned individuals with higher fitness scores. However, the Hybrid metaheuristic made twice as many requests than Tabu Search to overcome it. The SA algorithm obtained the worst fitnesse values. The algorithm initially used a scenario with an antipattern and found neighbors that still using an antipattern over the 17 generations of the experiment. The individual with best fitnesse value has 72 users on Happy Scenario 2, 30 users on Happy Scenario 1, 46 user with the antipattern Tower Babel and a response time of 11 seconds.
 
 % Please add the following required packages to your document preamble:
 % \usepackage[table,xcdraw]{xcolor}
@@ -1059,34 +1058,18 @@ From the experiment, We conclude that the metaheuristics converged to scenarios 
 \end{tabular}
 \end{table}
 
-
-The signed-rank Wilcoxon non-parametrical procedure was used for comparing the results with Z-value and W-value. The significant level adopted was 0.05. The Z-value obtained was -2.2736 and the p-value was 0.0232. The W-value obtained was 78. The critical value of W for N = 25 at p $\leq$ 0.05 was 89.The result was significant at p $\leq$ 0.05. The procedure showed that there was a significant improvement in the results with the use of the Hybrid Metaheuristc .
-
-The signed-rank Wilcoxon non-parametrical procedure was used for comparing the results with Z-value and W-value. The significant level adopted was 0.05. The Z-value obtained was -2.2736 and the p-value was 0.0232. The W-value obtained was 78. The critical value of W for N = 25 at p $\leq$ 0.05 was 89.The result was significant at p $\leq$ 0.05. The procedure showed that there was a significant improvement in the results with the use of the Hybrid Metaheuristc .
-
-The signed-rank Wilcoxon non-parametrical procedure was used for comparing the results with Z-value and W-value. The significant level adopted was 0.05. The Z-value obtained was -2.2736 and the p-value was 0.0232. The W-value obtained was 78. The critical value of W for N = 25 at p $\leq$ 0.05 was 89.The result was significant at p $\leq$ 0.05. The procedure showed that there was a significant improvement in the results with the use of the Hybrid Metaheuristc .
-
-The signed-rank Wilcoxon non-parametrical procedure was used for comparing the results with Z-value and W-value. The significant level adopted was 0.05. The Z-value obtained was -2.2736 and the p-value was 0.0232. The W-value obtained was 78. The critical value of W for N = 25 at p $\leq$ 0.05 was 89.The result was significant at p $\leq$ 0.05. The procedure showed that there was a significant improvement in the results with the use of the Hybrid Metaheuristc .
-
-The signed-rank Wilcoxon non-parametrical procedure was used for comparing the results with Z-value and W-value. The significant level adopted was 0.05. The Z-value obtained was -2.2736 and the p-value was 0.0232. The W-value obtained was 78. The critical value of W for N = 25 at p $\leq$ 0.05 was 89.The result was significant at p $\leq$ 0.05. The procedure showed that there was a significant improvement in the results with the use of the Hybrid Metaheuristc .
-
-The signed-rank Wilcoxon non-parametrical procedure was used for comparing the results with Z-value and W-value. The significant level adopted was 0.05. The Z-value obtained was -2.2736 and the p-value was 0.0232. The W-value obtained was 78. The critical value of W for N = 25 at p $\leq$ 0.05 was 89.The result was significant at p $\leq$ 0.05. The procedure showed that there was a significant improvement in the results with the use of the Hybrid Metaheuristc .
-
-
 \section{Conclusion}
 
-The signed-rank Wilcoxon non-parametrical procedure was used for comparing the results with Z-value and W-value. The significant level adopted was 0.05. The Z-value obtained was -2.2736 and the p-value was 0.0232. The W-value obtained was 78. The critical value of W for N = 25 at p $\leq$ 0.05 was 89.The result was significant at p $\leq$ 0.05. The procedure showed that there was a significant improvement in the results with the use of the Hybrid Metaheuristc .
+IAdapter Testbed is an open-source facility that provides software tools for search based test research. The testbed tool emulates test scenarios in a controled environment using mock objects and implementing performance antipatterns.  Two experiments were conducted to validate the proposed approach. The experiments uses genetic, algorithms, tabu search, simulated annealing and an hybrid approach proposed by Gois et al. \cite{Gois2016}.
+
+The experiments ran for 17 generations. The experiments used an initial population of 4 individuals by metaheuristic. All tests in the experiment were conducted without the need of a tester, automating the execution of stress tests with the JMeter tool.
+
+In both experiments the hybrid metaheuristic returned individuals with higher fitness scores. However, the Hybrid metaheuristic made twice as many requests than Tabu Search to overcome it. The SA algorithm obtained the worst fitnesse values. The algorithm initially used a scenario with an antipattern and found neighbors that still using the antipatterns over the 17 generations of the experiment.
+
+In the first experiment the metaheuristics converged to scenarios with an happy path, excluding the scenarios with the use of an antipatterns. The individual with best fitnesse value has 64 users on Happy Scenario 2, 81 users on Happy Scenario 1 and a response time of 12 seconds. None of the best individuals has one of the antipatterns used in the experiment.
 
 
-The signed-rank Wilcoxon non-parametrical procedure was used for comparing the results with Z-value and W-value. The significant level adopted was 0.05. The Z-value obtained was -2.2736 and the p-value was 0.0232. The W-value obtained was 78. The critical value of W for N = 25 at p $\leq$ 0.05 was 89.The result was significant at p $\leq$ 0.05. The procedure showed that there was a significant improvement in the results with the use of the Hybrid Metaheuristc .
-
-The signed-rank Wilcoxon non-parametrical procedure was used for comparing the results with Z-value and W-value. The significant level adopted was 0.05. The Z-value obtained was -2.2736 and the p-value was 0.0232. The W-value obtained was 78. The critical value of W for N = 25 at p $\leq$ 0.05 was 89.The result was significant at p $\leq$ 0.05. The procedure showed that there was a significant improvement in the results with the use of the Hybrid Metaheuristc .
-
-The signed-rank Wilcoxon non-parametrical procedure was used for comparing the results with Z-value and W-value. The significant level adopted was 0.05. The Z-value obtained was -2.2736 and the p-value was 0.0232. The W-value obtained was 78. The critical value of W for N = 25 at p $\leq$ 0.05 was 89.The result was significant at p $\leq$ 0.05. The procedure showed that there was a significant improvement in the results with the use of the Hybrid Metaheuristc .
-
-The signed-rank Wilcoxon non-parametrical procedure was used for comparing the results with Z-value and W-value. The significant level adopted was 0.05. The Z-value obtained was -2.2736 and the p-value was 0.0232. The W-value obtained was 78. The critical value of W for N = 25 at p $\leq$ 0.05 was 89.The result was significant at p $\leq$ 0.05. The procedure showed that there was a significant improvement in the results with the use of the Hybrid Metaheuristc .
-
-The signed-rank Wilcoxon non-parametrical procedure was used for comparing the results with Z-value and W-value. The significant level adopted was 0.05. The Z-value obtained was -2.2736 and the p-value was 0.0232. The W-value obtained was 78. The critical value of W for N = 25 at p $\leq$ 0.05 was 89.The result was significant at p $\leq$ 0.05. The procedure showed that there was a significant improvement in the results with the use of the Hybrid Metaheuristc .
+In the second experiment,  the metaheuristics converged to scenarios with an happy path and Tower Babel antipattern, excluding the scenarios with Unbalanced Processing antipattern. The individual with best fitnesse value has 72 users on Happy Scenario 2, 30 users on Happy Scenario 1, 46 user with the antipattern Tower Babel and a response time of 11 seconds. Future works include the use of new antipatterns and more experiments with the use of the antipattern Tower Babel.
 
 \FloatBarrier
 
