@@ -236,7 +236,9 @@ Contract/grant sponsor: #1}}}
     {\noindent\usebox\absbox\par}
     {\lineskip 1.5em%
       %
-      {\noindent\footnotesize Received \dots}\par}
+      {\noindent\footnotesize 
+      %Received \dots
+      }\par}
     {\vspace{11pt}%
       %
       {\noindent\@keywords}\par}

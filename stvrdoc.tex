@@ -67,13 +67,12 @@ T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 
 \title{Implementing a testbed tool for load, performance and stress search based tests}
 
-\author{Nauber Gois.~Pedro Porfírio.~André Coelho\corrauth}
+\author{Nauber Gois.~Pedro Porfírio.~André Coelho}
 
-\address{Universidade de Fortaleza, UNIFOR, Southern Gate, Chichester,
-West Sussex, PO19~8SQ, UK}
+\address{Universidade de Fortaleza, UNIFOR, Av. Washington Soares, 1321 - Edson Queiroz, Fortaleza - CE, 60811-905, Brasil}
 
-\corraddr{Journals Production Department, John Wiley \& Sons, Ltd,
-The Atrium, Southern Gate, Chichester, West Sussex, PO19~8SQ, UK.}
+%\corraddr{Journals Production Department, John Wiley \& Sons, Ltd,
+%The Atrium, Southern Gate, Chichester, West Sussex, PO19~8SQ, UK.}
 
 \begin{abstract}
 Metaheuristic search techniques have been extensively used to provide solutions for a more cost-effective testing process. Metaheuristics can solve complex problems in which an optimum solution must be found among a large amount of possibilities. The use of metaheuristics in testing activities is promising because of the high number of inputs that should be
@@ -86,14 +85,14 @@ execute. Such experiments are also extremely difficult to
 repeat. People who might want to duplicate published results, for example, must devote substantial resources to setting up and the environmental conditions are likely to be substantially different. This paper addresses the problem of comparing the use of several metaheuristics in search based tests. Since a real testbed is often extremely costly, an open source testbed simulator can represent a valid alternative to real device development and testbed deployment for academic and industrial research goals. In this paper, we propose a flexible testbed tool to evaluate various diversity combining metaheuristics in search based software testing. The testbed tool emulates test scenarios in a controled environment using mock objects and implementing performance antipatterns. Two experiments were conducted to validate the proposed approach. The experiments uses genetic, algorithms, tabu search, simulated annealing and an hybrid approach.
 \end{abstract}
 
-\keywords{class file; \LaTeXe; \emph{\journalabb}}
+\keywords{Testbed tool, Stress Testing, Search-Based Testing}
 
 \maketitle
 
-\footnotetext[2]{Please ensure that you use the most up to date
-class file,
-available from the STVR Home Page at\\
-\href{http://www3.interscience.wiley.com/journal/13635/home}{\texttt{http://www3.interscience.wiley.com/journal/13635/home}}}
+%\footnotetext[2]{Please ensure that you use the most up to date
+%class file,
+%available from the STVR Home Page at\\
+%\href{http://www3.interscience.wiley.com/journal/13635/home}{\texttt{http://www3.interscience.wiley.com/journal/13635/home}}}
 
 \vspace{-6pt}
 
@@ -690,7 +689,7 @@ The testbed tool proposed consists of four main elements. The first element is a
 
 \subsection{Test Module}
 
-The Test Module is responsible for load all classes that extends AbstractAlgorithm in the classpath and perform the tests under the application. The Emulator Module provides successful scenarios and antipatterns implementations. The heuristics are executed in order to select the scenarios with failures or high response times. The Fig. \ref{fig:step1} presents the first feature of Test Module where a initial population it is created and IAdapter with JMeterEngine performs all tests and apply a fitnesse value to each workload.
+The Test Module is responsible for load all classes that extends AbstractAlgorithm in the classpath and perform the tests under the application. The Emulator Module provides successful scenarios and antipatterns implementations. The heuristics are executed in order to select the scenarios with failures or high response times. The Fig. \ref{fig:step1} presents the first feature of Test Module where a initial population it is created and IAdapter with JMeterEngine performs all tests and apply a fitness value to each workload.
 
 \begin{figure}[h]
 \begin{minipage}{.5\textwidth}
@@ -707,12 +706,12 @@ The Test Module is responsible for load all classes that extends AbstractAlgorit
 \end{minipage}
 \end{figure} 
 
-The Fig. \ref{fig:step2} presents the Test Module life cycle. The life cycle iterate over two steps: The first step apply a metaheurist to select or generate a new set of workloads based on selection criteria. The second step run each workload with the JMeterEngine and obtain a fitnesse value based on some objective function. The red circles represent the workload that contain errors. The green circles represents the workloads with no errors and low acceptable response time. The testbed tool uses as default objective function the equation:
+The Fig. \ref{fig:step2} presents the Test Module life cycle. The life cycle iterate over two steps: The first step apply a metaheurist to select or generate a new set of workloads based on selection criteria. The second step run each workload with the JMeterEngine and obtain a fitness value based on some objective function. The red circles represent the workload that contain errors. The green circles represents the workloads with no errors and low acceptable response time. The testbed tool uses as default objective function the equation:
 
 
 \begin{equation}
 \begin{aligned}
-fitnesse=90percentileweigth* 90percentiletime\\
+fitness=90percentileweigth* 90percentiletime\\
 +80percentileweigth*80percentiletime\\+
 70percentileweigth*70percentiletime+\\
 maxResponseWeigth*maxResponseTime+\\
@@ -720,7 +719,7 @@ numberOfUsersWeigth*numberOfUsers-penalty
 \end{aligned}
 \end{equation}
 
-The use of presented fitnesse value by each metaheuristic it's optional. Each Metaheuristic could define your own objective function. The proposed  fitness function uses a series of manually adjustable user-defined weights (90percentileweight, 80percentileweight,  70percentileweight, maxResponseWeight, and numberOfUsersWeight). These weights make it possible to customize the search plugin's functionality. A penalty is applied when an application under test takes a longer time to respond than the level of service. After all these steps the cycle begins until the maximum number of generations it is reached. The Fig. \ref{fig:heuristicclassdiagram} shows the  class diagram for custom and provided heuristics. All heuristic classes extends the class AbstractAlgorithm. The heuristics receives  as input a  list of workspaces and a list of testcases. The workspace represents each individual in the search space.
+The use of presented fitness value by each metaheuristic it's optional. Each Metaheuristic could define your own objective function. The proposed  fitness function uses a series of manually adjustable user-defined weights (90percentileweight, 80percentileweight,  70percentileweight, maxResponseWeight, and numberOfUsersWeight). These weights make it possible to customize the search plugin's functionality. A penalty is applied when an application under test takes a longer time to respond than the level of service. After all these steps the cycle begins until the maximum number of generations it is reached. The Fig. \ref{fig:heuristicclassdiagram} shows the  class diagram for custom and provided heuristics. All heuristic classes extends the class AbstractAlgorithm. The heuristics receives  as input a  list of workspaces and a list of testcases. The workspace represents each individual in the search space.
 
 
 Each metaheuristic class returns a list of workspaces (the individuals selected to the next generation). The Listing presents the method that performs the search of classes that extends Abstract Algorithm
@@ -835,9 +834,9 @@ Fig. \ref{fig:neighbourtaby} shows the strategy used by the proposed solution to
 \FloatBarrier
 \section{Experiments}
 
-In this section, We present the results of experiments which we carried out to verify the antipatterns  implementation, the fitnesse objective function and the metaheuristics used by the testbed tool. We conducted two experiments in order to verify the effectiveness of the testbed tool.
+In this section, We present the results of experiments which we carried out to verify the antipatterns  implementation, the fitness objective function and the metaheuristics used by the testbed tool. We conducted two experiments in order to verify the effectiveness of the testbed tool.
 
-The experiments ran for 17 generations. The experiments used an initial population of 4 individuals by metaheuristic. The genetic algorithm used the top 10 individuals from each generation in the crossover operation. The Tabu list was configured with the size of 10 individuals and expired every 2 generations.  The mutation operation was applied to 10\% of the population on each generation. The experiments uses tabu search, genetic algorithms and the hybrid metaheuristic approach proposed by Gois et al. \cite{Gois2016}. The objective function applied is intended to maximize the number of users and minimize the response time of the scenarios being tested.  In this experiments, better fitnesse values meaning to find scenarios with more users and a low values of response time. A penalty is applied when the response time is greater than the  maximum response time expected. The experiments used the following fitness (goal) function. :
+The experiments ran for 17 generations. The experiments used an initial population of 4 individuals by metaheuristic. The genetic algorithm used the top 10 individuals from each generation in the crossover operation. The Tabu list was configured with the size of 10 individuals and expired every 2 generations.  The mutation operation was applied to 10\% of the population on each generation. The experiments uses tabu search, genetic algorithms and the hybrid metaheuristic approach proposed by Gois et al. \cite{Gois2016}. The objective function applied is intended to maximize the number of users and minimize the response time of the scenarios being tested.  In this experiments, better fitness values meaning to find scenarios with more users and a low values of response time. A penalty is applied when the response time is greater than the  maximum response time expected. The experiments used the following fitness (goal) function. :
 
 \begin{equation}
 \begin{aligned}
@@ -870,21 +869,21 @@ The experiments addresses:
 
 \subsection{The Ramp and Circuitous Treasure Hunt experiment}
 
-The experiment was carried out for 8 continuous hours.  All tests in the experiment were conducted without the need of a tester, automating the process of executing and designing performance test scenarios.In this experiment, Scenarios were generated with the Ramp and Circuitous Treasure antipattern as well as scenarios with Happy Scenario 1, Happy Scenario 2 and mixed scenarios. The Fig. \ref{fig:fitnessebygeneration1} and \ref{fig:fitnessebygeneration1-2} presents the fitnesse value obtained by each metaheuristic. The SA algorithm obtained the worst fitnesse values. Hybrid metaheuristic obtained the better fitnesse values. 
+The experiment was carried out for 8 continuous hours.  All tests in the experiment were conducted without the need of a tester, automating the process of executing and designing performance test scenarios.In this experiment, Scenarios were generated with the Ramp and Circuitous Treasure antipattern as well as scenarios with Happy Scenario 1, Happy Scenario 2 and mixed scenarios. The Fig. \ref{fig:fitnessbygeneration1} and \ref{fig:fitnessbygeneration1-2} presents the fitness value obtained by each metaheuristic. The SA algorithm obtained the worst fitness values. Hybrid metaheuristic obtained the better fitness values. 
 
 
 \begin{figure}[h]
 \begin{minipage}{.5\textwidth}
 \centering
-\includegraphics[width=1\textwidth]{./images/experiment1-1.png}
-\caption{Fitnesse value obtained by Search Method }
-\label{fig:fitnessebygeneration1}
+\includegraphics[width=1\textwidth]{./images/experiment1-1-bw.png}
+\caption{fitness value obtained by Search Method }
+\label{fig:fitnessbygeneration1}
 \end{minipage}
 \begin{minipage}{.5\textwidth}
 \centering
-\includegraphics[width=1\textwidth]{./images/experiment1-2.png}
-\caption{Fitnesse value obtained by Search Method without SA metaheuristic.}
-\label{fig:fitnessebygeneration1-2}
+\includegraphics[width=1\textwidth]{./images/experiment1-2-bw.png}
+\caption{fitness value obtained by Search Method without SA metaheuristic.}
+\label{fig:fitnessbygeneration1-2}
 \end{minipage}
 \end{figure}
 
@@ -894,31 +893,31 @@ Despite having obtained the best fitness value in each generation, the Hybrid al
 \begin{figure}[h]
 \begin{minipage}{.5\textwidth}
 \centering
-\includegraphics[width=1\textwidth]{./images/experiment1-3.png}
+\includegraphics[width=1\textwidth]{./images/experiment1-3-bw.png}
 \caption{Number of requests by Search Method}
 \label{fig:numberofrequestsbysearchmethod}
 \end{minipage}
 \begin{minipage}{.5\textwidth}
 \centering
 \includegraphics[width=1\textwidth]{./images/experiment1-4.png}
-\caption{Average, median, maximum and minimal fitnesse value by Search Method}
+\caption{Average, median, maximum and minimal fitness value by Search Method}
 \label{fig:boxplot1}
 \end{minipage}
 \end{figure}
 
-The Fig. \ref{fig:summaryboxplot1} presents the maximum, average, median and minimum fitnesse value by generation. The maximun fitnesse value increases at each generation. The Fig. \ref{fig:density1} presents the density graph of number of users by fitnesse value. The range between 100 and 150 users has the highest number of individuals found with higher fitnesse value.
+The Fig. \ref{fig:summaryboxplot1} presents the maximum, average, median and minimum fitness value by generation. The maximun fitness value increases at each generation. The Fig. \ref{fig:density1} presents the density graph of number of users by fitness value. The range between 100 and 150 users has the highest number of individuals found with higher fitness value.
 
 \begin{figure}[h]
 \begin{minipage}{.5\textwidth}
 \centering
 \includegraphics[width=1\textwidth]{./images/experiment1-5.png}
-\caption{Fitnesse value by generation}
+\caption{fitness value by generation}
 \label{fig:summaryboxplot1}
 \end{minipage}
 \begin{minipage}{.5\textwidth}
 \centering
 \includegraphics[width=1\textwidth]{./images/experiment1-6.png}
-\caption{Density graph of number of users by fitnesse value}
+\caption{Density graph of number of users by fitness value}
 \label{fig:density1}
 \end{minipage}
 \end{figure}
@@ -936,7 +935,7 @@ Table \ref{tab:bestindividuals} shows 4 individuals with 143 to 146 users. These
 \label{tab:bestindividuals}
 \begin{tabular}{lllllll}
 \rowcolor[HTML]{C0C0C0} 
-\textbf{Search Method} & \textbf{Generation} & \textbf{Users} & \textbf{Fitnesse Value} & \textbf{Happy 2} & \textbf{Happy 1} & \textbf{Response Time} \\
+\textbf{Search Method} & \textbf{Generation} & \textbf{Users} & \textbf{fitness Value} & \textbf{Happy 2} & \textbf{Happy 1} & \textbf{Response Time} \\
 Hybrid & 17 & 145 & 432760 & 64 & 81 & 12 \\
 Hybrid & 17 & 145 & 432740 & 46 & 99 & 13 \\
 Hybrid & 17 & 146 & 431760 & 54 & 92 & 12 \\
@@ -944,7 +943,7 @@ Hybrid & 16 & 143 & 426740 & 30 & 113 & 13
 \end{tabular}
 \end{table}
 
-Fig. \ref{fig:responsetimegenerationalltests1} presents the response time by number of users of individuals with Happy Scenario 1 and Happy Scenario 2. The Figure illustrates that the individuals with best fitnesse value has more users and minor response time. The Fig. \ref{fig:fitnessegenerationalltests1-1} presents the response time by number of users of individuals with the Ramp and Circuitous Treasure antipatterns scenarios. The Figure illustrates the smallest number of individuals with the antipatterns when compared to individuals who use the happy scenarios.
+Fig. \ref{fig:responsetimegenerationalltests1} presents the response time by number of users of individuals with Happy Scenario 1 and Happy Scenario 2. The Figure illustrates that the individuals with best fitness value has more users and minor response time. The Fig. \ref{fig:fitnessgenerationalltests1-1} presents the response time by number of users of individuals with the Ramp and Circuitous Treasure antipatterns scenarios. The Figure illustrates the smallest number of individuals with the antipatterns when compared to individuals who use the happy scenarios.
 
 
 \begin{figure}[h]
@@ -958,11 +957,11 @@ Fig. \ref{fig:responsetimegenerationalltests1} presents the response time by num
 \centering
 \includegraphics[width=1\textwidth]{./images/experiment1-8.png}
 \caption{Response time by number of users of individuals with the Ramp and Circuitous Treasure antipatterns}
-\label{fig:fitnessegenerationalltests1-1}
+\label{fig:fitnessgenerationalltests1-1}
 \end{minipage}
 \end{figure}
 
-In the first experiment, We conclude that the metaheuristics converged to scenarios with an happy path, excluding the scenarios with antipatterns. The hybrid metaheuristic returned individuals with higher fitness scores. However, the Hybrid metaheuristic made twice as many requests than Tabu Search to overcome it. The SA algorithm obtained the worst fitnesse values. The algorithm initially used a scenario with the Ramp and Circuitous Treasure antipatterns  and found neighbors that still using the antipatterns over the 17 generations of the experiment.
+In the first experiment, We conclude that the metaheuristics converged to scenarios with an happy path, excluding the scenarios with antipatterns. The hybrid metaheuristic returned individuals with higher fitness scores. However, the Hybrid metaheuristic made twice as many requests than Tabu Search to overcome it. The SA algorithm obtained the worst fitness values. The algorithm initially used a scenario with the Ramp and Circuitous Treasure antipatterns  and found neighbors that still using the antipatterns over the 17 generations of the experiment.
 
 
 
@@ -970,17 +969,17 @@ In the first experiment, We conclude that the metaheuristics converged to scenar
 
 \subsection{The Tower Babel  and Unbalanced Processing experiment}
 
-The experiment was carried out for 6 continuous hours. All tests in the experiment were conducted without the need of a tester. In this experiment, Scenarios were generated with Tower Babel and Unbalanced Processing antipattern as well as scenarios with Happy Scenario 1, Happy Scenario 2 and mixed scenarios. The Fig. \ref{fig:fitnessebygeneration2}  presents the fitnesse value obtained by each metaheuristic. The SA algorithm obtained the worst fitnesse values. Hybrid metaheuristic obtained the better fitnesse values.
+The experiment was carried out for 6 continuous hours. All tests in the experiment were conducted without the need of a tester. In this experiment, Scenarios were generated with Tower Babel and Unbalanced Processing antipattern as well as scenarios with Happy Scenario 1, Happy Scenario 2 and mixed scenarios. The Fig. \ref{fig:fitnessbygeneration2}  presents the fitness value obtained by each metaheuristic. The SA algorithm obtained the worst fitness values. Hybrid metaheuristic obtained the better fitness values.
 
 
 \begin{figure}[h]
 \centering
 \includegraphics[width=.7\textwidth]{./images/experiment2-7.png}
 \caption{itnesse value obtained by Search Method}
-\label{fig:fitnessebygeneration2}
+\label{fig:fitnessbygeneration2}
 \end{figure}
 
-As in the first experiment, the Hybrid algorithm performs twice as many requests as the second one, the tabu search (Fig. \ref{fig:numberofrequestsbysearchmethod2}). The Fig. \ref{fig:boxplot2} shows the average, minimal e maximum value by search method. The Fig. \ref{fig:summaryboxplot2} presents the maximum, average, median and minimum fitnesse value by generation. The maximun fitnesse value increases at each generation. The Fig. \ref{fig:density2} presents the density graph of number of users by fitnesse value. The range between 100 and 150 users has the highest number of individuals found with higher fitnesse value.
+As in the first experiment, the Hybrid algorithm performs twice as many requests as the second one, the tabu search (Fig. \ref{fig:numberofrequestsbysearchmethod2}). The Fig. \ref{fig:boxplot2} shows the average, minimal e maximum value by search method. The Fig. \ref{fig:summaryboxplot2} presents the maximum, average, median and minimum fitness value by generation. The maximun fitness value increases at each generation. The Fig. \ref{fig:density2} presents the density graph of number of users by fitness value. The range between 100 and 150 users has the highest number of individuals found with higher fitness value.
 
 
 \begin{figure}[h]
@@ -1019,7 +1018,7 @@ As in the first experiment, the Hybrid algorithm performs twice as many requests
 
 Table \ref{tab:bestindividuals2} shows 4 individuals with 145 to 148 users.  The first individual has 72 users on Happy Scenario 2, 30 users on Happy Scenario 1, 46 user with the antipattern Tower Babel and a response time of 11 seconds. Despite the fact of doing 300 conversions of the JSON standard for XML. The antipattern implementation does not return a much higher response time than happy paths. While happy paths returns from 10 to 15 seconds from a single user, Tower Babel antipattern has a response time of 10 to 29 seconds. None of the best individuals found implements the Unbalanced Processing antipattern.
 
-Fig. \ref{fig:responsetimegenerationalltests2} presents the response time by number of users of individuals with Happy Scenario 1 and Happy Scenario 2. The Figure illustrates that the individuals with best fitnesse value has more users and minor response time. The Fig. \ref{fig:fitnessegenerationalltests2-1} presents the response time by number of users of individuals with with Unbalanced Processing antipatterns scenarios. The Figure illustrates the smallest number of individuals with the  Unbalanced Processing antipattern when compared to individuals who use the happy scenarios and the Tower Babel antipattern.
+Fig. \ref{fig:responsetimegenerationalltests2} presents the response time by number of users of individuals with Happy Scenario 1 and Happy Scenario 2. The Figure illustrates that the individuals with best fitness value has more users and minor response time. The Fig. \ref{fig:fitnessgenerationalltests2-1} presents the response time by number of users of individuals with with Unbalanced Processing antipatterns scenarios. The Figure illustrates the smallest number of individuals with the  Unbalanced Processing antipattern when compared to individuals who use the happy scenarios and the Tower Babel antipattern.
 
 
 
@@ -1035,11 +1034,11 @@ Fig. \ref{fig:responsetimegenerationalltests2} presents the response time by num
 \centering
 \includegraphics[width=0.7\textwidth]{./images/experiment2-6.png}
 \caption{Response time by number of users of individuals with Unbalanced Processing antipattern}
-\label{fig:fitnessegenerationalltests2-1}
+\label{fig:fitnessgenerationalltests2-1}
 \end{figure}
 
 
-We conclude that the metaheuristics converged to scenarios with an happy path and Tower Babel antipattern, excluding the scenarios with Unbalanced Processing antipattern. The hybrid metaheuristic returned individuals with higher fitness scores. However, the Hybrid metaheuristic made twice as many requests than Tabu Search to overcome it. The SA algorithm obtained the worst fitnesse values. The algorithm initially used a scenario with an antipattern and found neighbors that still using an antipattern over the 17 generations of the experiment. The individual with best fitnesse value has 72 users on Happy Scenario 2, 30 users on Happy Scenario 1, 46 user with the antipattern Tower Babel and a response time of 11 seconds.
+We conclude that the metaheuristics converged to scenarios with an happy path and Tower Babel antipattern, excluding the scenarios with Unbalanced Processing antipattern. The hybrid metaheuristic returned individuals with higher fitness scores. However, the Hybrid metaheuristic made twice as many requests than Tabu Search to overcome it. The SA algorithm obtained the worst fitness values. The algorithm initially used a scenario with an antipattern and found neighbors that still using an antipattern over the 17 generations of the experiment. The individual with best fitness value has 72 users on Happy Scenario 2, 30 users on Happy Scenario 1, 46 user with the antipattern Tower Babel and a response time of 11 seconds.
 
 % Please add the following required packages to your document preamble:
 % \usepackage[table,xcdraw]{xcolor}
@@ -1050,7 +1049,7 @@ We conclude that the metaheuristics converged to scenarios with an happy path an
 \label{tab:bestindividuals2}
 \begin{tabular}{llllllll}
 \rowcolor[HTML]{FFCCC9} 
-\textbf{Search Method} & \textbf{Generation} & \textbf{Users} & \textbf{Fitnesse Value} & \textbf{Happy 2} & \textbf{Tower} & \textbf{Happy 1} & \textbf{Time} \\ 
+\textbf{Search Method} & \textbf{Generation} & \textbf{Users} & \textbf{fitness Value} & \textbf{Happy 2} & \textbf{Tower} & \textbf{Happy 1} & \textbf{Time} \\ 
 \multicolumn{1}{l}{Hybrid} & \multicolumn{1}{l}{17} & \multicolumn{1}{l}{148} & \multicolumn{1}{l}{437780} & \multicolumn{1}{l}{72} & \multicolumn{1}{l}{46} & \multicolumn{1}{l}{30} & \multicolumn{1}{l}{11} \\ 
 \multicolumn{1}{l}{Hybrid} & \multicolumn{1}{l}{17} & \multicolumn{1}{l}{145} & \multicolumn{1}{l}{432740} & \multicolumn{1}{l}{71} & \multicolumn{1}{l}{15} & \multicolumn{1}{l}{59} & \multicolumn{1}{l}{13} \\ 
 \multicolumn{1}{l}{Hybrid} & \multicolumn{1}{l}{16} & \multicolumn{1}{l}{146} & \multicolumn{1}{l}{431800} & \multicolumn{1}{l}{72} & \multicolumn{1}{l}{31} & \multicolumn{1}{l}{43} & \multicolumn{1}{l}{10} \\ 
@@ -1064,12 +1063,12 @@ IAdapter Testbed is an open-source facility that provides software tools for sea
 
 The experiments ran for 17 generations. The experiments used an initial population of 4 individuals by metaheuristic. All tests in the experiment were conducted without the need of a tester, automating the execution of stress tests with the JMeter tool.
 
-In both experiments the hybrid metaheuristic returned individuals with higher fitness scores. However, the Hybrid metaheuristic made twice as many requests than Tabu Search to overcome it. The SA algorithm obtained the worst fitnesse values. The algorithm initially used a scenario with an antipattern and found neighbors that still using the antipatterns over the 17 generations of the experiment.
+In both experiments the hybrid metaheuristic returned individuals with higher fitness scores. However, the Hybrid metaheuristic made twice as many requests than Tabu Search to overcome it. The SA algorithm obtained the worst fitness values. The algorithm initially used a scenario with an antipattern and found neighbors that still using the antipatterns over the 17 generations of the experiment.
 
-In the first experiment the metaheuristics converged to scenarios with an happy path, excluding the scenarios with the use of an antipatterns. The individual with best fitnesse value has 64 users on Happy Scenario 2, 81 users on Happy Scenario 1 and a response time of 12 seconds. None of the best individuals has one of the antipatterns used in the experiment.
+In the first experiment the metaheuristics converged to scenarios with an happy path, excluding the scenarios with the use of an antipatterns. The individual with best fitness value has 64 users on Happy Scenario 2, 81 users on Happy Scenario 1 and a response time of 12 seconds. None of the best individuals has one of the antipatterns used in the experiment.
 
 
-In the second experiment,  the metaheuristics converged to scenarios with an happy path and Tower Babel antipattern, excluding the scenarios with Unbalanced Processing antipattern. The individual with best fitnesse value has 72 users on Happy Scenario 2, 30 users on Happy Scenario 1, 46 user with the antipattern Tower Babel and a response time of 11 seconds. Future works include the use of new antipatterns and more experiments with the use of the antipattern Tower Babel.
+In the second experiment,  the metaheuristics converged to scenarios with an happy path and Tower Babel antipattern, excluding the scenarios with Unbalanced Processing antipattern. The individual with best fitness value has 72 users on Happy Scenario 2, 30 users on Happy Scenario 1, 46 user with the antipattern Tower Babel and a response time of 11 seconds. Future works include the use of new antipatterns and more experiments with the use of the antipattern Tower Babel.
 
 \FloatBarrier
 
